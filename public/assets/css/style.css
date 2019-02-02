@@ -20,21 +20,21 @@ body {
 
 #saved {
   font-family: "Faster One", cursive;
-  color: rgba(69, 5, 5, 0.734) !important;
+  /* color: rgba(69, 5, 5, 0.734) !important; */
   font-size: 30px;
   text-align: center;
 }
 
 .navbar-brand {
   font-family: "Faster One", cursive;
-  color: rgba(69, 5, 5, 0.734) !important;
+  /* color: rgba(69, 5, 5, 0.734) !important; */
   font-size: 35px;
 }
 
-#scrape-btn,
+/* #scrape-btn,
 #delete-btn {
   background-color: rgba(69, 5, 5, 0.734) !important;
-}
+} */
 
 .page-background {
   margin: 0;
@@ -53,22 +53,10 @@ body {
   height: 700px;
 }
 
-#save-btn,
-.addNote,
-.delete,
-.save-note-btn,
-.delete-note-btn,
-.save,
-.saved {
-  color: rgba(69, 5, 5, 0.734);
-  border: none;
-  background-color: white;
-}
-
-.saved:hover {
+/* .saved:hover {
   background-color: rgba(69, 5, 5, 0.734) !important;
   color: white;
-}
+} */
 
 .card-link {
   color: rgba(255, 255, 255, 0.741) !important;
