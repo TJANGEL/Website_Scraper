@@ -1,0 +1,87 @@
+body {
+  font-family: "Assistant", sans-serif;
+}
+#container {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+#main-page,
+#saved-page {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("../img/news_background2.png");
+}
+
+.card {
+  opacity: 0.85;
+  color: white;
+  background-color: rgba(14, 1, 1, 0.517);
+}
+
+#saved {
+  font-family: "Faster One", cursive;
+  color: rgba(69, 5, 5, 0.734) !important;
+  font-size: 30px;
+  text-align: center;
+}
+
+.navbar-brand {
+  font-family: "Faster One", cursive;
+  color: rgba(69, 5, 5, 0.734) !important;
+  font-size: 35px;
+}
+
+#scrape-btn,
+#delete-btn {
+  background-color: rgba(69, 5, 5, 0.734) !important;
+}
+
+.page-background {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat, no-repeat;
+  background-position: center, center;
+  background-size: cover, cover;
+}
+
+#articles {
+  display: inline-block;
+  overflow: auto;
+  width: 60%;
+  height: 700px;
+}
+
+#save-btn,
+.addNote,
+.delete,
+.save-note-btn,
+.delete-note-btn,
+.save {
+  background-color: rgba(69, 5, 5, 0.734) !important;
+  border: none;
+}
+
+.card-link {
+  color: rgba(255, 255, 255, 0.741) !important;
+}
+
+.card-link:hover {
+  font-size: 20px;
+}
+
+img {
+  width: 30px;
+  height: 30px;
+  float: right;
+}
+
+.page-footer {
+  background-color: rgba(69, 5, 5, 0.734) !important;
+  color: white;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
