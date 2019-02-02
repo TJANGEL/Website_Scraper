@@ -58,11 +58,7 @@ body {
 .delete,
 .save-note-btn,
 .delete-note-btn,
-.save {
-  background-color: rgba(69, 5, 5, 0.734) !important;
-  border: none;
-}
-
+.save,
 .saved {
   color: rgba(69, 5, 5, 0.734);
   border: none;
