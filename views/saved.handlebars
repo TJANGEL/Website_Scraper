@@ -1,0 +1,26 @@
+<body class="page-background" id="saved-page">
+
+    <div class="container">
+        <h3 id="saved">Saved articles</h3>
+
+        {{#each article}}
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">{{this.title}}</h5>
+                <a href={{this.link}} target="_blank" class="card-link">Article</a>
+                <p class="card-text">Article Summary: {{this.summary}}</p>
+
+                <br>
+                <br>
+                <button type="button" class="btn btn-success addNote" data-toggle="modal" data-target="#noteModal{{this._id}}"
+                    data-id={{this._id}}>Add a Note</button>
+                <button type="button" class="btn btn-danger delete" data-id={{this._id}}>Delete</button>
+            </div>
+        </div>
+        {{/each}}
+
+    </div>
+
+
+    <!--Clicked Notes Modal-->
+    {{#each article}} {{> modal }} {{/each}}

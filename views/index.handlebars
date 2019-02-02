@@ -1,0 +1,25 @@
+<body class="page-background" id="main-page">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-12">
+
+                {{#each article}}
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">{{this.title}}</h5>
+                        <a href={{this.link}} class="card-link">
+                            <i class="far fa-newspaper"></i> Read Article</a>
+                        <br>
+                        <br>
+                        <p class="card-text">Article Summary: {{this.summary}}</p>
+
+                        <br>
+                        <button type="button" class="btn btn-success save" data-id={{this._id}}>Save Article</button>
+                    </div>
+                </div>
+                {{/each}}
+
+            </div>
+        </div>
+    </div>
