@@ -63,6 +63,17 @@ body {
   border: none;
 }
 
+.saved {
+  color: rgba(69, 5, 5, 0.734);
+  border: none;
+  background-color: white;
+}
+
+.saved:hover {
+  background-color: rgba(69, 5, 5, 0.734) !important;
+  color: white;
+}
+
 .card-link {
   color: rgba(255, 255, 255, 0.741) !important;
 }
