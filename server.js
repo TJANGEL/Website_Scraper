@@ -80,7 +80,7 @@ app.get("/scrape", function(req, res) {
     $("div.article__description").each(function(i, element) {
       var result = {};
 
-      // Add the text and href of every link, and save them as properties of the result object
+      //   // Add the text and href of every link, and save them as properties of the result object
       result.title = $(element)
         .find("h3")
         .text();
@@ -99,6 +99,29 @@ app.get("/scrape", function(req, res) {
           return res.json(err);
         });
     });
+
+    // $("article.article--small").each(function(i, element) {
+    //   var result = {};
+
+    //   // Add the text and href of every link, and save them as properties of the result object
+    //   result.img = $(element)
+    //     .find("a")
+    //     .children("div.article__image");
+    //   // result.link = $(element)
+    //   //   .find("a")
+    //   //   .attr("href");
+    //   // result.summary = $(element)
+    //   //   .find("p")
+    //   //   .text();
+
+    //   Article.create(result)
+    //     .then(function(data) {
+    //       console.log(data);
+    //     })
+    //     .catch(function(err) {
+    //       return res.json(err);
+    //     });
+    // });
 
     res.send("Scrape Complete");
   });
