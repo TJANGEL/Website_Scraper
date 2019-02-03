@@ -21,7 +21,7 @@ body {
 
 #saved {
   font-family: "Faster One", cursive;
-  color: seagreen !important;
+  color: seagreen;
   font-size: 50px;
   text-align: center;
   padding: 20px;
@@ -29,7 +29,6 @@ body {
 
 .navbar-brand {
   font-family: "Faster One", cursive;
-  /* color: rgba(69, 5, 5, 0.734) !important; */
   font-size: 35px;
 }
 
@@ -68,13 +67,8 @@ body {
 }
 
 /* footer */
-.page-footer {
-  background-color: rgba(69, 5, 5, 0.734)
-  color: white;
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
+.footer {
+  text-align: center;
 }
 
 .github {
