@@ -48,10 +48,13 @@ body {
   height: 700px;
 }
 
-/* .saved:hover {
-  background-color: rgba(69, 5, 5, 0.734) !important;
-  color: white;
-} */
+#saved-btn:hover {
+  color: seagreen;
+}
+
+#home-btn:hover {
+  color: seagreen;
+}
 
 .card-link {
   color: rgba(255, 255, 255, 0.741) !important;
