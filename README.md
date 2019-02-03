@@ -23,9 +23,10 @@ Click [here](https://sleepy-caverns-38398.herokuapp.com/) to view heroku deploye
 
 ## Built With
 
-- [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
+<!-- - [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
 - [Maven](https://maven.apache.org/) - Dependency Management
-- [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+- [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds -->
+
 - [Express.js](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
 - [nodemon](https://nodemon.io/)
 - [Bootstrap](https://getbootstrap.com/) - CSS Framework
