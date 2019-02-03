@@ -6,6 +6,9 @@ var mongoose = require("mongoose");
 var path = require("path");
 
 //Models
+// Require all models
+var db = require("./models");
+
 var Note = require("./models/Note.js");
 var Article = require("./models/Article.js");
 
@@ -100,36 +103,13 @@ app.get("/scrape", function(req, res) {
         });
     });
 
-    // $("article.article--small").each(function(i, element) {
-    //   var result = {};
-
-    //   // Add the text and href of every link, and save them as properties of the result object
-    //   result.img = $(element)
-    //     .find("a")
-    //     .children("div.article__image");
-    //   // result.link = $(element)
-    //   //   .find("a")
-    //   //   .attr("href");
-    //   // result.summary = $(element)
-    //   //   .find("p")
-    //   //   .text();
-
-    //   Article.create(result)
-    //     .then(function(data) {
-    //       console.log(data);
-    //     })
-    //     .catch(function(err) {
-    //       return res.json(err);
-    //     });
-    // });
-
     res.send("Scrape Complete");
   });
 });
 
 //////////ROUTE: CLEAR UNSAVED
 app.get("/clear", function(req, res) {
-  db.Article.remove({ saved: false }, function(err, doc) {
+  db.Article.remove({ saved: false }, function(err) {
     if (err) {
       console.log(err);
     } else {
@@ -230,7 +210,7 @@ app.post("/notes/save/:id", function(req, res) {
   });
 });
 
-/////////////////////////ROUTE TO DELTE A NOTE
+/////////////////////////ROUTE TO DELETE A NOTE
 app.delete("/notes/delete/:note_id/:article_id", function(req, res) {
   // Use the note id to find and delete it
   Note.findOneAndRemove({ _id: req.params.note_id }, function(err) {
