@@ -98,3 +98,7 @@ div.col-md-12 {
   text-align: right;
   margin-right: 5px;
 }
+
+.close:hover {
+  color: rgb(175, 29, 29);
+}
