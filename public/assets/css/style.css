@@ -12,6 +12,14 @@ body {
   /* url("../img/news_background2.png"); */
 }
 
+.jumbotron {
+  background: lightgray;
+}
+
+.jumbotron h1 {
+  font-family: "Faster One", cursive;
+}
+
 .card {
   opacity: 0.85;
   color: white;
