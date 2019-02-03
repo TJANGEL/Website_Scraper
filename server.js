@@ -6,9 +6,8 @@ var mongoose = require("mongoose");
 var path = require("path");
 
 //Models
-// Require all models
+//Require all models
 var db = require("./models");
-
 var Note = require("./models/Note.js");
 var Article = require("./models/Article.js");
 
