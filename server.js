@@ -56,7 +56,7 @@ app.set("view engine", "handlebars");
 //   process.env.MONGODB_URI || "mongodb://localhost/heroku_qptmv007";
 
 // mongoose.connect(MONGODB_URI);
-mongoose.connect("mongodb://localhost/heroku_qptmv007", {
+mongoose.connect("mongodb://localhost/news-scraper", {
   useNewUrlParser: true
 });
 
