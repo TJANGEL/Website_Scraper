@@ -1,21 +1,10 @@
 body {
   font-family: "Assistant", sans-serif;
 }
-/* #container {
-  margin-left: 50px;
-  margin-right: 50px;
-} */
-
-#main-page,
-#saved-page {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3))
-    url("../img/news_background2.png");
-}
 
 .jumbotron {
-  /* background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3))
-    url("../img/news_background.png") !important; */
   padding-bottom: 50px;
+  background-image: url("../img/news_background2.png");
 }
 
 div.col-md-12 {
