@@ -8,8 +8,8 @@ var path = require("path");
 //Models
 //Require all models
 var db = require("./models");
-var Note = require("./models/Note.js");
-var Article = require("./models/Article.js");
+// var Note = require("./models/Note.js");
+// var Article = require("./models/Article.js");
 
 // Scraping tools
 var axios = require("axios");
