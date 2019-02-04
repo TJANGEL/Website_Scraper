@@ -44,8 +44,8 @@ app.engine(
 );
 app.set("view engine", "handlebars");
 
+// mongoose connection
 // mongoose.connect("mongodb://localhost/news-scraper");
-
 var MONGODB_URI =
   process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
 
