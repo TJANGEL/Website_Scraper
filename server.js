@@ -5,15 +5,15 @@ var logger = require("morgan");
 var mongoose = require("mongoose");
 var path = require("path");
 
+// Scraping tools
+var axios = require("axios");
+var cheerio = require("cheerio");
+
 //Models
 //Require all models
 var db = require("./models");
 var Note = require("./models/Note.js");
 var Article = require("./models/Article.js");
-
-// Scraping tools
-var axios = require("axios");
-var cheerio = require("cheerio");
 
 //Port
 var PORT = process.env.PORT || 3030;
