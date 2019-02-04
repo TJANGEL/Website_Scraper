@@ -12,8 +12,7 @@
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title">{{this.title}}</h5>
-                <a href={{this.link}} target="_blank" class="card-link"><i class="far fa-newspaper"></i> Article</a>
-                <br><br>
+                <br>
                 <p class="card-text">Article Summary: {{this.summary}}</p>
 
                 <br>
@@ -21,6 +20,8 @@
                 <button type="button" class="btn btn-success addNote" data-toggle="modal" data-target="#noteModal{{this._id}}"
                     data-id={{this._id}}>Comments on Article</button>
                 <button type="button" class="btn btn-danger delete" data-id={{this._id}}>Delete</button>
+                <button type="button" class="btn btn-primary read"><a href={{this.link}} target="_blank" class="card-link">Read
+                        Article</a></button>
             </div>
         </div>
         {{/each}}
