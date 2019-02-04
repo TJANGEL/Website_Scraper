@@ -13,29 +13,33 @@ div.col-md-12 {
 
 .jumbotron h1 {
   font-family: "Faster One", cursive;
+  color: rgb(230, 223, 223);
 }
 
 .jumbotron h2 {
   font-size: 30px;
+  color: rgb(230, 223, 223);
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 }
 
 .card {
   opacity: 0.85;
-  color: white;
+  color: rgba(255, 255, 255, 0.741);
   background-color: rgba(14, 1, 1, 0.517);
   margin: 15px;
 }
 
 #saved {
   /* font-family: "Faster One", cursive; */
-  color: seagreen;
+  color: rgb(230, 223, 223);
   font-size: 50px;
   text-align: center;
   padding: 20px;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 }
 
 .navbar-brand {
-  /* font-family: "Faster One", cursive; */
+  font-family: "Faster One", cursive;
   font-size: 35px;
 }
 
@@ -46,12 +50,18 @@ div.col-md-12 {
   height: 700px;
 }
 
-#saved-btn:hover {
-  color: seagreen;
+#saved-btn {
+  color: rgb(230, 223, 223);
 }
 
-#home-btn:hover {
-  color: seagreen;
+#saved-btn:hover,
+#home-btn:hover,
+#scrape-btn:hover {
+  color: darkcyan;
+}
+
+#delete-btn:hover {
+  color: white;
 }
 
 .card-link {
@@ -60,7 +70,7 @@ div.col-md-12 {
 
 .card-link:hover {
   font-size: 20px;
-  color: seagreen;
+  color: darkcyan;
 }
 
 /* footer */
