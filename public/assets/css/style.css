@@ -12,13 +12,14 @@ body {
     url("../img/news_background2.png");
 }
 
-/* .jumbotron {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3))
-    url("../img/news_background.png") !important;
-} */
+.jumbotron {
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3))
+    url("../img/news_background.png") !important; */
+  padding-bottom: 50px;
+}
 
 div.col-md-12 {
-  margin-bottom: 250px;
+  margin-bottom: 430px;
 }
 
 .jumbotron h1 {
