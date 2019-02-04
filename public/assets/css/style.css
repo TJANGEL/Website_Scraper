@@ -32,13 +32,11 @@ div.col-md-12 {
 }
 
 #saved {
-  /* font-family: "Faster One", cursive; */
   color: rgb(230, 223, 223);
   font-size: 60px;
   text-align: center;
   padding: 20px;
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
-  border: rgb(9, 204, 204) solid 4px;
   border-radius: 5px;
   background: rgb(80, 80, 80);
 }
@@ -55,6 +53,7 @@ div.col-md-12 {
   height: 700px;
 }
 
+/* Buttons */
 #saved-btn {
   color: rgb(230, 223, 223);
 }
