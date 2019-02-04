@@ -23,7 +23,11 @@ div.col-md-12 {
 }
 
 .jumbotron h1 {
-  /* font-family: "Faster One", cursive; */
+  font-family: "Faster One", cursive;
+}
+
+.jumbotron h2 {
+  font-size: 30px;
 }
 
 .card {
