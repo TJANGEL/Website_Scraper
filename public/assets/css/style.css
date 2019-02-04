@@ -96,6 +96,6 @@ div.col-md-12 {
 
 /* modal */
 .close {
-  float: right;
+  text-align: right;
   margin-right: 5px;
 }
