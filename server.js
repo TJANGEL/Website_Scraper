@@ -52,10 +52,13 @@ app.set("view engine", "handlebars");
 
 // mongoose connection
 // mongoose.connect("mongodb://localhost/news-scraper");
-var MONGODB_URI =
-  process.env.MONGODB_URI || "mongodb://localhost/heroku_qptmv007";
+// var MONGODB_URI =
+//   process.env.MONGODB_URI || "mongodb://localhost/heroku_qptmv007";
 
-mongoose.connect(MONGODB_URI);
+// mongoose.connect(MONGODB_URI);
+mongoose.connect("mongodb://localhost/unit18Populater", {
+  useNewUrlParser: true
+});
 
 ////////////////////////ROUTES TO MAIN PAGE
 app.get("/", function(req, res) {
