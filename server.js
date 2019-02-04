@@ -22,12 +22,18 @@ var PORT = process.env.PORT || 3030;
 var app = express();
 
 // Use morgan and body parser with our app
+// app.use(logger("dev"));
+// app.use(
+//   bodyParser.urlencoded({
+//     extended: false
+//   })
+// );
+
+// Use morgan logger for logging requests
 app.use(logger("dev"));
-app.use(
-  bodyParser.urlencoded({
-    extended: false
-  })
-);
+// Parse request body as JSON
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 // Make public a static dir
 app.use(express.static("public"));
@@ -46,7 +52,8 @@ app.set("view engine", "handlebars");
 
 // mongoose connection
 // mongoose.connect("mongodb://localhost/news-scraper");
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/news-scraper";
+var MONGODB_URI =
+  process.env.MONGODB_URI || "mongodb://localhost/heroku_qptmv007";
 
 mongoose.connect(MONGODB_URI);
 
