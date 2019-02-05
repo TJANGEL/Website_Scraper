@@ -10,13 +10,13 @@ var axios = require("axios");
 var cheerio = require("cheerio");
 var methodOverride = require("method-override");
 
-//Models
-//Require all models
+// Models
+// Require all models
 var db = require("./models");
 var Note = require("./models/Note.js");
 var Article = require("./models/Article.js");
 
-//Port
+// Port
 var PORT = process.env.PORT || 3030;
 
 // Initialize Express
@@ -43,14 +43,13 @@ app.engine(
 );
 app.set("view engine", "handlebars");
 
-// mongoose connection
-// mongoose.connect("mongodb://localhost/news-scraper");
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/news-scraper";
-
 // mongoose.connect(MONGODB_URI);
-// mongoose.connect("mongodb://localhost/news-scraper", {
-//   useNewUrlParser: true
-// });
+// var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/news-scraper";
+
+// mongoose connection
+mongoose.connect("mongodb://localhost/news-scraper", {
+  useNewUrlParser: true
+});
 
 // Database configuration with mongoose
 // mongoose.connect("mongodb://localhost/mongo-news-scraper");
@@ -64,21 +63,8 @@ var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/news-scraper";
 //   });
 // }
 
-// var db = mongoose.connection;
-
-// Set Handlebars.
-// var exphbs = require("express-handlebars");
-
-// app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-// app.set("view engine", "handlebars");
-
 // Override with POST having ?_method=DELETE
 // app.use(methodOverride("_method"));
-
-// Once logged in to the db through mongoose, log a success message
-// db.once("open", function() {
-//   console.log("Mongoose connection successful.");
-// });
 
 ////////////////////////ROUTES TO MAIN PAGE
 app.get("/", function(req, res) {
