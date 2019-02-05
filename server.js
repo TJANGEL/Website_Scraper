@@ -8,10 +8,11 @@ var path = require("path");
 // Scraping tools
 var axios = require("axios");
 var cheerio = require("cheerio");
+var methodOverride = require("method-override");
 
 //Models
 //Require all models
-var db = require("./models/index.js");
+var db = require("./models");
 var Note = require("./models/Note.js");
 var Article = require("./models/Article.js");
 
@@ -48,9 +49,37 @@ app.set("view engine", "handlebars");
 //   process.env.MONGODB_URI || "mongodb://localhost/heroku_qptmv007";
 
 // mongoose.connect(MONGODB_URI);
-mongoose.connect("mongodb://localhost/news-scraper", {
-  useNewUrlParser: true
-});
+// mongoose.connect("mongodb://localhost/news-scraper", {
+//   useNewUrlParser: true
+// });
+
+// Database configuration with mongoose
+// mongoose.connect("mongodb://localhost/mongo-news-scraper");
+//define local mongoDB URI
+if (process.env.MONGODB_URI) {
+  //THIS EXECUTES IF THIS IS IN HEROKU
+  mongoose.connect(process.env.MONGODB_URI);
+} else {
+  mongoose.connect("mongodb://localhost/mongo-news-scraper", {
+    useNewUrlParser: true
+  });
+}
+
+// var db = mongoose.connection;
+
+// Set Handlebars.
+// var exphbs = require("express-handlebars");
+
+// app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+// app.set("view engine", "handlebars");
+
+// Override with POST having ?_method=DELETE
+app.use(methodOverride("_method"));
+
+// Once logged in to the db through mongoose, log a success message
+// db.once("open", function() {
+//   console.log("Mongoose connection successful.");
+// });
 
 ////////////////////////ROUTES TO MAIN PAGE
 app.get("/", function(req, res) {
@@ -139,7 +168,7 @@ app.get("/articles/:id", function(req, res) {
   Article.findOne({ _id: req.params.id })
     //Populate note
     .populate("note")
-    .then(function(error, data) {
+    .exec(function(error, data) {
       // Log any errors
       if (error) {
         console.log(error);
