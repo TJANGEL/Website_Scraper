@@ -45,8 +45,7 @@ app.set("view engine", "handlebars");
 
 // mongoose connection
 // mongoose.connect("mongodb://localhost/news-scraper");
-var MONGODB_URI =
-  process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/news-scraper";
 
 // mongoose.connect(MONGODB_URI);
 // mongoose.connect("mongodb://localhost/news-scraper", {
@@ -74,7 +73,7 @@ var MONGODB_URI =
 // app.set("view engine", "handlebars");
 
 // Override with POST having ?_method=DELETE
-app.use(methodOverride("_method"));
+// app.use(methodOverride("_method"));
 
 // Once logged in to the db through mongoose, log a success message
 // db.once("open", function() {
