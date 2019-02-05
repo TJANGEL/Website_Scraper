@@ -11,7 +11,7 @@ var cheerio = require("cheerio");
 
 //Models
 //Require all models
-var db = require("./models/index");
+var db = require("./models/index.js");
 var Note = require("./models/Note.js");
 var Article = require("./models/Article.js");
 
@@ -20,14 +20,6 @@ var PORT = process.env.PORT || 3030;
 
 // Initialize Express
 var app = express();
-
-// Use morgan and body parser with our app
-// app.use(logger("dev"));
-// app.use(
-//   bodyParser.urlencoded({
-//     extended: false
-//   })
-// );
 
 // Use morgan logger for logging requests
 app.use(logger("dev"));
@@ -147,7 +139,7 @@ app.get("/articles/:id", function(req, res) {
   Article.findOne({ _id: req.params.id })
     //Populate note
     .populate("note")
-    .exec(function(error, data) {
+    .then(function(error, data) {
       // Log any errors
       if (error) {
         console.log(error);
