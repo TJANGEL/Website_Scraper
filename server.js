@@ -45,8 +45,8 @@ app.set("view engine", "handlebars");
 
 // mongoose connection
 // mongoose.connect("mongodb://localhost/news-scraper");
-// var MONGODB_URI =
-//   process.env.MONGODB_URI || "mongodb://localhost/heroku_qptmv007";
+var MONGODB_URI =
+  process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
 
 // mongoose.connect(MONGODB_URI);
 // mongoose.connect("mongodb://localhost/news-scraper", {
@@ -56,14 +56,14 @@ app.set("view engine", "handlebars");
 // Database configuration with mongoose
 // mongoose.connect("mongodb://localhost/mongo-news-scraper");
 //define local mongoDB URI
-if (process.env.MONGODB_URI) {
-  //THIS EXECUTES IF THIS IS IN HEROKU
-  mongoose.connect(process.env.MONGODB_URI);
-} else {
-  mongoose.connect("mongodb://localhost/mongo-news-scraper", {
-    useNewUrlParser: true
-  });
-}
+// if (process.env.MONGODB_URI) {
+//   //THIS EXECUTES IF THIS IS IN HEROKU
+//   mongoose.connect(process.env.MONGODB_URI);
+// } else {
+//   mongoose.connect("mongodb://localhost/mongo-news-scraper", {
+//     useNewUrlParser: true
+//   });
+// }
 
 // var db = mongoose.connection;
 
