@@ -1,5 +1,6 @@
 body {
   font-family: "Assistant", sans-serif;
+  background: slategray;
 }
 
 .jumbotron {
@@ -8,20 +9,15 @@ body {
 }
 
 div.col-md-12 {
-  margin-bottom: 430px;
+  margin-bottom: 230px;
 }
 
 .jumbotron h1 {
   font-family: "Audiowide", cursive;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
   color: rgb(230, 223, 223);
   font-size: 80px;
   padding-bottom: 20px;
-}
-
-.jumbotron h2 {
-  font-size: 40px;
-  color: rgb(230, 223, 223);
-  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 }
 
 .card {
@@ -32,13 +28,15 @@ div.col-md-12 {
 }
 
 #saved {
+  font-family: "Audiowide", cursive;
   color: rgb(230, 223, 223);
   font-size: 60px;
   text-align: center;
   padding: 20px;
-  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  /* text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black; */
   border-radius: 5px;
-  background: rgb(80, 80, 80);
+  background: slategray;
+  margin-bottom: 0px;
 }
 
 .navbar-brand {
