@@ -36,6 +36,8 @@ Click [here](https://sleepy-caverns-38398.herokuapp.com/) to view heroku deploye
 - [MongoDB](https://docs.mongodb.com/manual/) - Database
 - [Mongoose](http://mongoosejs.com/docs/api.html)
 - [Cheerio](https://github.com/cheeriojs/cheerio)
+- [Axios](https://www.npmjs.com/package/axios) - Promise based client
+
 
 ## Authors
 
