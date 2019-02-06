@@ -48,7 +48,7 @@ if (process.env.MONGODB_URI) {
   //THIS EXECUTES IF THIS IS IN HEROKU
   mongoose.connect(process.env.MONGODB_URI);
 } else {
-  mongoose.connect("mongodb://localhost/mongo-news-scraper", {
+  mongoose.connect("mongodb://localhost/heroku_vvsnv46n", {
     useNewUrlParser: true
   });
 }
