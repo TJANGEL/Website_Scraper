@@ -46,7 +46,7 @@ app.set("view engine", "handlebars");
 //define local mongoDB URI
 if (process.env.MONGODB_URI) {
   //THIS EXECUTES IF THIS IS IN HEROKU
-  mongoose.connect(process.env.MONGODB_URI);
+  mongoose.connect(process.env.MONGOLAB_GRAY);
 } else {
   mongoose.connect("mongodb://localhost/heroku_vvsnv46n", {
     useNewUrlParser: true
