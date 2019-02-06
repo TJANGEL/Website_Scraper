@@ -3,7 +3,6 @@ var express = require("express");
 var logger = require("morgan");
 var mongoose = require("mongoose");
 var path = require("path");
-var methodOverride = require("method-override");
 
 // Scraping tools
 var axios = require("axios");
@@ -47,19 +46,12 @@ app.set("view engine", "handlebars");
 //define local mongoDB URI
 if (process.env.MONGODB_URI) {
   //THIS EXECUTES IF THIS IS IN HEROKU
-  // mongoose.connect(process.env.MONGODB_URI);
-  var MONGODB_URI =
-    process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
-
-  mongoose.connect(MONGODB_URI);
+  mongoose.connect(process.env.MONGODB_URI);
 } else {
   mongoose.connect("mongodb://localhost/mongo-news-scraper", {
     useNewUrlParser: true
   });
 }
-
-// Override with POST having ?_method=DELETE
-// app.use(methodOverride("_method"));
 
 ////////////////////////ROUTES TO MAIN PAGE
 app.get("/", function(req, res) {
