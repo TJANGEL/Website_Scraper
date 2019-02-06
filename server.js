@@ -52,19 +52,19 @@ app.set("view engine", "handlebars");
 //     useNewUrlParser: true
 //   });
 // }
-mongoose.Promise = global.Promise;
-mongoose
-  .connect("mongodb://tom:angeloni1@ds051605.mlab.com:51605/heroku_vvsnv46n")
-  .then(() => console.log("MongoDB Connected"))
-  .catch(err => console.log(err));
-// if (process.env.MONGODB_URI) {
-//   //THIS EXECUTES IF THIS IS IN HEROKU
-//   mongoose.connect(process.env.MONGOLAB_GRAY);
-// } else {
-//   mongoose.connect("mongodb://localhost/heroku_vvsnv46n", {
-//     useNewUrlParser: true
-//   });
-// }
+// mongoose.Promise = global.Promise;
+// mongoose
+//   .connect("mongodb://tom:angeloni1@ds051605.mlab.com:51605/heroku_vvsnv46n")
+//   .then(() => console.log("MongoDB Connected"))
+//   .catch(err => console.log(err));
+if (process.env.MONGODB_URI) {
+  //THIS EXECUTES IF THIS IS IN HEROKU
+  mongoose.connect(process.env.MONGOLAB_GRAY);
+} else {
+  mongoose.connect("mongodb://localhost/heroku_vvsnv46n", {
+    useNewUrlParser: true
+  });
+}
 
 ////////////////////////ROUTES TO MAIN PAGE
 app.get("/", function(req, res) {
