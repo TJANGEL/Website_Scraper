@@ -15,8 +15,10 @@ var Note = require("./models/Note.js");
 var Article = require("./models/Article.js");
 
 // Port
-var PORT = process.env.PORT || 3030;
+var PORT = process.env.PORT || 3000;
 
+var MONGODB_URI =
+  process.env.MONGODB_URI || "mongodb://127.0.0.1/mongoNewsScraper";
 // Initialize Express
 var app = express();
 
@@ -57,14 +59,16 @@ app.set("view engine", "handlebars");
 //   .connect("mongodb://tom:angeloni1@ds051605.mlab.com:51605/heroku_vvsnv46n")
 //   .then(() => console.log("MongoDB Connected"))
 //   .catch(err => console.log(err));
-if (process.env.MONGODB_URI) {
-  //THIS EXECUTES IF THIS IS IN HEROKU
-  mongoose.connect(process.env.MONGOLAB_GRAY);
-} else {
-  mongoose.connect("mongodb://localhost/heroku_vvsnv46n", {
-    useNewUrlParser: true
-  });
-}
+// if (process.env.MONGODB_URI) {
+//   //THIS EXECUTES IF THIS IS IN HEROKU
+//   mongoose.connect(process.env.MONGOLAB_GRAY);
+// } else {
+//   mongoose.connect("mongodb://localhost/heroku_vvsnv46n", {
+//     useNewUrlParser: true
+//   });
+// }
+mongoose.Promise = global.Promise;
+mongoose.connect(MONGODB_URI);
 
 ////////////////////////ROUTES TO MAIN PAGE
 app.get("/", function(req, res) {
