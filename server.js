@@ -101,7 +101,7 @@ app.get("/scrape", function(req, res) {
     $("div.article__description").each(function(i, element) {
       var result = {};
 
-      //   // Add the text and href of every link, and save them as properties of the result object
+      // Add the text and href of every link, and save them as properties of the result object
       result.title = $(element)
         .find("h3")
         .text();
@@ -214,16 +214,14 @@ app.post("/notes/save/:id", function(req, res) {
       Article.findOneAndUpdate(
         { _id: req.params.id },
         { $push: { notes: note } }
-      )
-        /////???EXEC VS THEN???
-        .exec(function(err) {
-          if (err) {
-            console.log(err);
-            res.send(err);
-          } else {
-            res.send(note);
-          }
-        });
+      ).exec(function(err) {
+        if (err) {
+          console.log(err);
+          res.send(err);
+        } else {
+          res.send(note);
+        }
+      });
     }
   });
 });
