@@ -10,7 +10,7 @@ var cheerio = require("cheerio");
 
 // Models
 // Require all models
-var db = require("./models");
+var db = require("./models/index.js");
 var Note = require("./models/Note.js");
 var Article = require("./models/Article.js");
 
