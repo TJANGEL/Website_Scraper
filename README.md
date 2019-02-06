@@ -8,7 +8,7 @@ User can save specific articles and make comments on them.
 
 Option to clear all away all the scraped articles and start fresh / all saved articles and comments will remain on the saved articles page.
 
-![scraper](https://github.com/TJANGEL/sequelizedBurger/blob/master/public/assets/img/sequelizedburger_screenshot.png)
+![scraper](https://github.com/TJANGEL/Website_Scraper/blob/master/public/assets/img/news_scraper_screenshot.png)
 
 ## Getting Started
 
