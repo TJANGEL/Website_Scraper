@@ -63,12 +63,15 @@ app.set("view engine", "handlebars");
 //   //THIS EXECUTES IF THIS IS IN HEROKU
 //   mongoose.connect(process.env.MONGOLAB_GRAY);
 // } else {
-//   mongoose.connect("mongodb://localhost/heroku_vvsnv46n", {
+//   mongoose.connect("mongodb://tom:angeloni1@ds051605.mlab.com:51605/heroku_vvsnv46n", {
 //     useNewUrlParser: true
 //   });
 // }
-mongoose.Promise = global.Promise;
-mongoose.connect(MONGODB_URI);
+mongoose.Promise = Promise;
+mongoose.connect("mongodb://tom:angeloni1@ds051605.mlab.com:51605/heroku_vvsnv46n", {
+    useNewUrlParser: true
+  });
+
 
 ////////////////////////ROUTES TO MAIN PAGE
 app.get("/", function(req, res) {
