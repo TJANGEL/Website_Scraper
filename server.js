@@ -1,14 +1,13 @@
 // Dependencies
 var express = require("express");
-// var bodyParser = require("body-parser");
 var logger = require("morgan");
 var mongoose = require("mongoose");
 var path = require("path");
+var methodOverride = require("method-override");
 
 // Scraping tools
 var axios = require("axios");
 var cheerio = require("cheerio");
-var methodOverride = require("method-override");
 
 // Models
 // Require all models
@@ -47,21 +46,21 @@ app.set("view engine", "handlebars");
 // var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/news-scraper";
 
 // mongoose connection
-mongoose.connect("mongodb://localhost/news-scraper", {
-  useNewUrlParser: true
-});
+// mongoose.connect("mongodb://localhost/news-scraper", {
+//   // useNewUrlParser: true
+// });
 
 // Database configuration with mongoose
 // mongoose.connect("mongodb://localhost/mongo-news-scraper");
 //define local mongoDB URI
-// if (process.env.MONGODB_URI) {
-//   //THIS EXECUTES IF THIS IS IN HEROKU
-//   mongoose.connect(process.env.MONGODB_URI);
-// } else {
-//   mongoose.connect("mongodb://localhost/mongo-news-scraper", {
-//     useNewUrlParser: true
-//   });
-// }
+if (process.env.MONGODB_URI) {
+  //THIS EXECUTES IF THIS IS IN HEROKU
+  mongoose.connect(process.env.MONGODB_URI);
+} else {
+  mongoose.connect("mongodb://localhost/mongo-news-scraper", {
+    useNewUrlParser: true
+  });
+}
 
 // Override with POST having ?_method=DELETE
 // app.use(methodOverride("_method"));
